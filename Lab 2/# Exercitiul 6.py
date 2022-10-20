@@ -6,13 +6,7 @@
 # and x = 2 lists [1,2,3 ] # 1 is in list 1 and 4, 
 # 2 is in list 1 and 2, 3 is in lists 1 and 2.
 
-#  A LOT OF PROBLEMS
-
 import collections
-import numpy as np
-from operator import itemgetter
-
-from sympy import re
 
 def the_function(no_of_lists, x):
     list_of_lists = []
