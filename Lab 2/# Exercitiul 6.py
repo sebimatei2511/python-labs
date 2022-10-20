@@ -8,25 +8,28 @@
 
 #  A LOT OF PROBLEMS
 
+import collections
 import numpy as np
 from operator import itemgetter
 
 from sympy import re
 
 def the_function(no_of_lists, x):
-    reunion = []
-    freq = []
+    list_of_lists = []
+    result_list = []
 
     for index in range(0, no_of_lists):
         list_input = input("Add a list: ").split()
-        reunion.append(list_input)
+        list_of_lists = list_of_lists + list_input
 
-    reunion = map(itemgetter, reunion)
+    freq = collections.Counter(list_of_lists)
 
-    for i in range(0, len(reunion)):
-        print(reunion[i])
+    for key, value in freq.items():
+        if value == x:
+            result_list.append(key)
 
-    return print(reunion)
+    return result_list
 
-
-the_function(4,2)
+x = int(input("Enter a whole number:"))
+y = int(input("Enter a number of lists:"))
+print(the_function(y,x))
