@@ -8,25 +8,15 @@
 # id= " someid ") returns  the string = 
 # "<a href=\"http://python.org \ "_class = \" my-link \ "id = \" someid \ "> Hello there </a>"
 
-def the_function(tag, content, _href, _class, _id):
-    result_string = ""
 
-    result_string += "<"
-    result_string += tag
-    result_string += " href=\""
-    result_string += _href
-    result_string += "\" "
-    result_string += "_class=\""
-    result_string += _class
-    result_string += "\" "
-    result_string += " id=\""
-    result_string += _id
-    result_string += "\" >"
-    result_string += content
-    result_string += "</"
-    result_string += tag
-    result_string += ">"
+def the_function(tag, content, **args):
+    result_string = f'<{tag} '
+
+    for key, value in args.items():
+        result_string += f'{key}=\\\"{value}\\\"'
+
+    result_string += f'>{content} </{tag}>'
     
     print(result_string)
 
-the_function("a", "Hello there", "http://python.org", "my-link", "someid")
+the_function("a", "Hello there", href = "http://python.org", _class = "my-link", id = "someid")

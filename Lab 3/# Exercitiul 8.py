@@ -12,7 +12,7 @@ def loop(dict):
     key = 'start'
     result_list = []
 
-    while key != dict[key]:
+    while dict[key] not in result_list:
         result_list.append(dict[key])
         key = dict[key]
 

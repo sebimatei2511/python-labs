@@ -10,7 +10,10 @@ def compare_dicts(dict1, dict2):
     else:
         flag = 0
         for i in dict1:
-            if dict1.get(i) != dict2.get(i):
+            if type(dict1.get(i)) != type(dict2.get(i)):
+                flag = 1
+                break
+            elif dict1.get(i) != dict2.get(i):
                 flag = 1
                 break
     
