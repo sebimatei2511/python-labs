@@ -8,9 +8,6 @@
 # the function will return the dictionary: 
 # {'a': 3, 's': 2, '.': 1, 'e': 1, 'h': 1, 'l': 1, 'p': 2, ' ': 2, 'A': 1, 'n': 1}
 
-from calendar import c
-
-
 def The_function(string_input):
     dictionary = {}
     result_list = []
