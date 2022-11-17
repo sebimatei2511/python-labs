@@ -12,5 +12,5 @@ def the_function(cnp_input):
         return False
 
 print(the_function("5001125221234"))
-# am incercat sa validez cat mai real, nu am reusit 
+# am incercat sa validez cat mai real, nu prea am reusit 
 # am pus spatiile in regex doar pentru a putea fi urmarite mai bine secventele
